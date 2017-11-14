@@ -7,12 +7,19 @@ const app = express();
 app.use(logger('dev'));
 
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({
+    extended: false
+}));
 
 app.get('*', (req, res) => {
+    res.status(200).send({
+        message: 'hello'
+    });
+    /*
     res.type('html');
     res.write('<h2>Test app with postgreSQL and Express</h2>');
     res.end();
+    */
 });
 
 module.exports = app;
