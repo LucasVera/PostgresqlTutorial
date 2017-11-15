@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "babel src -d public && nodemon ./public/bin/www.js"
+    "dev": "babel src -d public && babel server -d public && nodemon ./public/bin/www.js"
   },
   "repository": {
     "type": "git",
@@ -20,9 +20,14 @@
   "dependencies": {
     "body-parser": "^1.18.2",
     "express": "^4.16.2",
-    "morgan": "^1.9.0"
+    "morgan": "^1.9.0",
+    "pg": "^7.4.0",
+    "pg-hstore": "^2.3.2",
+    "sequelize": "^4.22.6",
+    "sequelize-cli": "^3.0.0"
   },
   "devDependencies": {
+    "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
     "babel-preset-es2015": "^6.24.1",
     "nodemon": "^1.12.1"

@@ -12,14 +12,10 @@ app.use(bodyParser.urlencoded({
 }));
 
 app.get('*', (req, res) => {
-    res.status(200).send({
-        message: 'hello'
-    });
-    /*
     res.type('html');
     res.write('<h2>Test app with postgreSQL and Express</h2>');
     res.end();
-    */
+    
 });
 
 module.exports = app;
