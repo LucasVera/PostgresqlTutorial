@@ -7,6 +7,7 @@ import db from {};
 const env = process.env.NODE_ENV || 'development';
 const basename = path.basename(__filename);
 
+let sequelize;
 if (config.use_env_variable) {
   sequelize = new Sequelize(process.env[config.use_env_variable]);
 } else {

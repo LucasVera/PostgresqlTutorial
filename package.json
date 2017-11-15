@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "babel src -d public && babel server -d public && nodemon ./public/bin/www.js"
+    "dev": "babel src -d public && nodemon ./public/bin/www.js"
   },
   "repository": {
     "type": "git",
